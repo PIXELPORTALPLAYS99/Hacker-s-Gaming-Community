@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AMONG US | HACKER Gaming Community</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0a0a0a;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+    }
+    header {
+      background: linear-gradient(90deg, #ff004f, #00ffe7);
+      padding: 20px;
+      font-size: 36px;
+      text-shadow: 0 0 15px #00ffe7;
+      letter-spacing: 3px;
+    }
+    .content {
+      margin: 50px auto;
+      padding: 30px;
+      max-width: 850px;
+      background: #1a1a1a;
+      border-radius: 16px;
+      box-shadow: 0 0 25px #ff004f;
+    }
+    .content h2 {
+      font-size: 32px;
+      color: #00ffe7;
+      text-shadow: 0 0 12px #00ffe7;
+      margin-bottom: 20px;
+    }
+    .content p {
+      font-size: 20px;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+    .game-image {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00ffe7;
+      margin-bottom: 30px;
+    }
+    .button-container {
+      margin-top: 30px;
+    }
+    button {
+      padding: 16px 34px;
+      background: #00ffe7;
+      color: #000;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
+      box-shadow: 0 0 20px #00ffe7;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ff004f;
+      color: #fff;
+      box-shadow: 0 0 25px #ff004f;
+    }
+    .discord-button {
+  background: #5865F2;
+  color: #fff;
+  box-shadow: 0 0 20px #5865F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 20px auto;  /* <-- THIS centers it horizontally */
+  transition: 0.3s;
+  width: fit-content;  /* only as wide as content */
+}
+    .discord-button:hover {
+      background: #4752C4;
+      box-shadow: 0 0 25px #4752C4;
+    }
+    .invite-box {
+      background: #0a0a0a;
+      border: 2px solid #00ffe7;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00ffe7;
+    }
+    .invite-box h3 {
+      color: #ff004f;
+      margin-bottom: 15px;
+      text-shadow: 0 0 10px #ff004f;
+    }
+    .invite-code {
+      font-size: 22px;
+      color: #00ffe7;
+      word-break: break-all;
+      padding: 10px;
+      background: #1a1a1a;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      display: inline-block;
+    }
+    .copy-btn {
+      padding: 12px 20px;
+      font-size: 16px;
+      background: #ff004f;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #ff004f;
+      transition: 0.3s;
+    }
+    .copy-btn:hover {
+      background: #00ffe7;
+      color: #000;
+      box-shadow: 0 0 20px #00ffe7;
+    }
+    .discord-logo {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>🎮 AMONG US | HACKER Gaming Community 🎮</header>
+
+  <div class="content">
+    <h2>AMONG US - Adventure Awaits!</h2>
+    <img class="game-image" src="AMONG US.jpeg" alt="AMONG US">
+    <p>"Find the imposter or betray your crew — Who will you trust?"</p>
+
+    <div class="invite-box">
+      <h3>🎉 Join our Discord Gaming Squad!</h3>
+      <div class="invite-code" id="inviteCode">GGtfjnbk</div>
+      <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+      <br><br>
+      <button class="discord-button" onclick="window.open('https://discord.gg/GGtfjnbk')">
+        <img src="discord-logo.png" alt="Discord Logo" class="discord-logo">
+        Join on Discord
+      </button>
+    </div>
+
+    <div class="button-container">
+      <button onclick="window.location.href='lobby.html'">⬅ Back to Lobby</button>
+    </div>
+  </div>
+
+  <script>
+    function copyCode() {
+      const code = document.getElementById("inviteCode").innerText;
+      navigator.clipboard.writeText(code);
+      alert("✅ Invite Code copied: " + code);
+    }
+  </script>
+
+</body>
+</html>

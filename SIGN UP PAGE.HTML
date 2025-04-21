@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up | HACKER Gaming Community</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0a0a0a;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+    }
+    header {
+      background: linear-gradient(90deg, #ff004f, #00ffe7);
+      padding: 20px;
+      text-align: center;
+      font-size: 36px;
+      letter-spacing: 3px;
+      text-shadow: 0 0 10px #00ffe7;
+    }
+    .signup-container {
+      max-width: 450px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #1a1a1a;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #ff004f;
+    }
+    .signup-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #ff004f;
+      text-shadow: 0 0 10px #ff004f;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 12px 0;
+      border: none;
+      border-radius: 6px;
+      background: #0a0a0a;
+      color: #00ffe7;
+      font-size: 16px;
+      box-shadow: 0 0 10px #00ffe7 inset;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #00ffe7;
+      color: #000;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      box-shadow: 0 0 15px #00ffe7;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ff004f;
+      color: #fff;
+      box-shadow: 0 0 20px #ff004f;
+    }
+    .login-option {
+      text-align: center;
+      margin-top: 20px;
+      color: #ccc;
+      font-size: 16px;
+    }
+    .login-option a {
+      color: #00ffe7;
+      text-decoration: none;
+      margin-left: 5px;
+      transition: 0.3s;
+    }
+    .login-option a:hover {
+      color: #ff004f;
+    }
+  </style>
+</head>
+<body>
+
+  <header>🎮 Join HACKER Gaming Community 🎮</header>
+
+  <div class="signup-container">
+    <h2>Create Your Account</h2>
+    <form id="signup-form">
+      <input type="text" id="username" placeholder="Gamer Tag" required>
+      <input type="email" id="email" placeholder="Email Address" required>
+      <input type="text" id="game" placeholder="Favorite Game" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="password" id="confirm_password" placeholder="Confirm Password" required>
+      <button type="submit">Join Now!</button>
+    </form>
+
+    <div class="login-option">
+      Already have an account?
+      <a href="login.html">Login</a>
+    </div>
+
+    <script>
+      document.getElementById("signup-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        // Get form values
+        const username = document.getElementById("username").value;
+        const email = document.getElementById("email").value;
+        const game = document.getElementById("game").value;
+        const password = document.getElementById("password").value;
+
+        // Save data in localStorage
+        localStorage.setItem("username", username);
+        localStorage.setItem("email", email);
+        localStorage.setItem("game", game);
+        localStorage.setItem("password", password);
+
+        // Redirect to lobby after registration
+        window.location.href = "lobby.html";
+      });
+    </script>
+  </div>
+
+</body>
+</html>

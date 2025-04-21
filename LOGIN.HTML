@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | HACKER Gaming Community</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0a0a0a;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+    }
+    header {
+      background: linear-gradient(90deg, #ff004f, #00ffe7);
+      padding: 20px;
+      text-align: center;
+      font-size: 36px;
+      letter-spacing: 3px;
+      text-shadow: 0 0 10px #00ffe7;
+    }
+    .login-container {
+      max-width: 450px;
+      margin: 60px auto;
+      padding: 30px;
+      background: #1a1a1a;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #ff004f;
+    }
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #ff004f;
+      text-shadow: 0 0 10px #ff004f;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 12px 0;
+      border: none;
+      border-radius: 6px;
+      background: #0a0a0a;
+      color: #00ffe7;
+      font-size: 16px;
+      box-shadow: 0 0 10px #00ffe7 inset;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #00ffe7;
+      color: #000;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      box-shadow: 0 0 15px #00ffe7;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ff004f;
+      color: #fff;
+      box-shadow: 0 0 20px #ff004f;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #00ffe7;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    .back-link:hover {
+      color: #ff004f;
+    }
+    .signup-option {
+      text-align: center;
+      margin-top: 20px;
+      color: #ccc;
+      font-size: 16px;
+    }
+    .signup-option a {
+      color: #00ffe7;
+      text-decoration: none;
+      margin-left: 5px;
+      transition: 0.3s;
+    }
+    .signup-option a:hover {
+      color: #ff004f;
+    }
+  </style>
+</head>
+<body>
+
+  <header>🎮 Join HACKER Gaming Community 🎮</header>
+
+  <div class="login-container">
+    <h2>Login to Your Account</h2>
+    <form id="login-form">
+      <input type="text" id="login-username" placeholder="Gamer Tag" required>
+      <input type="password" id="login-password" placeholder="Password" required>
+      <button type="submit">Login Now!</button>
+    </form>
+
+    <div class="signup-option">
+      Don't have an account?
+      <a href="SIGN UP PAGE.HTML">Sign Up</a>
+    </div>
+
+    <a href="SpaceSite-AI.html" class="back-link">⬅ Back to Home</a>
+
+    <script>
+      document.getElementById("login-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const username = document.getElementById("login-username").value;
+        const password = document.getElementById("login-password").value;
+
+        // Check if the entered username and password match saved data in localStorage
+        const savedUsername = localStorage.getItem("username");
+        const savedPassword = localStorage.getItem("password");
+
+        if (username === savedUsername && password === savedPassword) {
+          // Redirect to lobby after successful login
+          window.location.href = "lobby.html";
+        } else {
+          alert("Invalid credentials, please try again.");
+        }
+      });
+    </script>
+  </div>
+
+</body>
+</html>

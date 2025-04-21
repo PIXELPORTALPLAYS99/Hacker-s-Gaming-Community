@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lobby | HACKER Gaming Community</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0a0a0a;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+    }
+    header {
+      background: linear-gradient(90deg, #ff004f, #00ffe7);
+      padding: 20px;
+      text-align: center;
+      font-size: 36px;
+      letter-spacing: 3px;
+      text-shadow: 0 0 10px #00ffe7;
+    }
+    .lobby-container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #1a1a1a;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #ff004f;
+      text-align: center;
+    }
+    .lobby-container h2 {
+      margin-bottom: 30px;
+      color: #ff004f;
+      text-shadow: 0 0 10px #ff004f;
+    }
+    .greeting {
+      font-size: 24px;
+      color: #00ffe7;
+      margin-bottom: 20px;
+    }
+    .game-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .game-item {
+      background: #333;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #ff004f;
+      transition: 0.3s;
+    }
+    .game-item:hover {
+      background: #00ffe7;
+      box-shadow: 0 0 25px #00ffe7;
+    }
+    .game-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .game-item h3 {
+      font-size: 20px;
+      color: #fff;
+    }
+    .button-container {
+      margin-top: 30px;
+    }
+    button {
+      padding: 14px 30px;
+      background: #00ffe7;
+      color: #000;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #00ffe7;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ff004f;
+      color: #fff;
+      box-shadow: 0 0 20px #ff004f;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #00ffe7;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    .back-link:hover {
+      color: #ff004f;
+    }
+    .other-games-message {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>🎮 Welcome to HACKER Gaming Community 🎮</header>
+
+  <div class="lobby-container">
+    <h2>Welcome to the Lobby!</h2>
+
+    <div class="greeting" id="greeting-message">
+      <!-- Greeting message will be inserted here -->
+    </div>
+
+    <div class="game-list">
+      <div class="game-item" onclick="window.location.href='minecraft.html'">
+        <img src="Flux_Dev_Create_a_highly_detailed_4K_digital_artwork_of_a_Mine_3.jpg" alt="Minecraft">
+        <h3>Minecraft</h3>
+      </div>
+      <div class="game-item" onclick="window.location.href='roblox.html'">
+        <img src="Flux_Dev_Create_a_highresolution_4K_image_measuring_1450_x_450_0.jpg" alt="Roblox">
+        <h3>Roblox</h3>
+      </div>
+      <div class="game-item" onclick="window.location.href='cod.html'">
+        <img src="CALL OF DUTY.jpg" alt="Call of Duty">
+        <h3>Call of Duty</h3>
+      </div>
+      <div class="game-item" onclick="window.location.href='FREE FIRE.html'">
+        <img src="FREE FIRE.jpg" alt="Free Fire">
+        <h3>Free Fire</h3>
+      </div>
+      <div class="game-item" onclick="window.location.href='AMONG US.html'">
+        <img src="AMONG US.jpeg" alt="Among Us">
+        <h3>Among Us</h3>
+      </div>
+      <div class="game-item" onclick="window.location.href='bgmi.html'">
+        <img src="bbgmi.jpg" alt="BGMI">
+        <h3>BGMI</h3>
+      </div>
+    </div>    
+
+    <div class="other-games-message">
+      <p>Other games will come soon! Stay tuned 🎮</p>
+    </div>
+
+    <div class="button-container">
+      <button onclick="window.location.href='SpaceSite-AI.html'">Back to Home</button>
+    </div>
+
+
+    <script>
+      // Fetch the username from localStorage
+      const username = localStorage.getItem("username");
+
+      // Display a personalized greeting message
+      if (username) {
+        document.getElementById("greeting-message").innerText = `Welcome back, ${username}! 🎮`;
+      } else {
+        document.getElementById("greeting-message").innerText = `Welcome to the HACKER Gaming Community! 🎮`;
+      }
+    </script>
+  </div>
+
+</body>
+</html>
