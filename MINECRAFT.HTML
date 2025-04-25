@@ -65,21 +65,21 @@
       box-shadow: 0 0 25px #ff004f;
     }
     .discord-button {
-  background: #5865F2;
-  color: #fff;
-  box-shadow: 0 0 20px #5865F2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 14px 28px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  margin: 20px auto;  /* <-- THIS centers it horizontally */
-  transition: 0.3s;
-  width: fit-content;  /* only as wide as content */
-}
+      background: #5865F2;
+      color: #fff;
+      box-shadow: 0 0 20px #5865F2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 20px auto;
+      transition: 0.3s;
+      width: fit-content;
+    }
     .discord-button:hover {
       background: #4752C4;
       box-shadow: 0 0 25px #4752C4;
@@ -101,7 +101,7 @@
     .invite-code {
       font-size: 22px;
       color: #00ffe7;
-      word-break: break-all;
+      word-break: break-word;
       padding: 10px;
       background: #1a1a1a;
       border-radius: 8px;
@@ -140,6 +140,14 @@
     <p>"Unleash your imagination 🧱✨ — Build, Break, Survive, Repeat!"</p>
 
     <div class="invite-box">
+      <h3>🌍 Minecraft Server Info</h3>
+      <div class="invite-code">Server IP: <span style="color: #fff;">halftruthxd.minefort.com</span></div>
+      <div class="invite-code">Java Port: <span style="color: #fff;">25565</span></div>
+      <div class="invite-code">Bedrock Port: <span style="color: #fff;">19132</span></div>
+      <button class="copy-btn" onclick="copyServerIP()">Copy IP</button>
+    </div>
+
+    <div class="invite-box">
       <h3>🎉 Join our Discord Gaming Squad!</h3>
       <div class="invite-code" id="inviteCode">GGtfjnbk</div>
       <button class="copy-btn" onclick="copyCode()">Copy Code</button>
@@ -160,6 +168,12 @@
       const code = document.getElementById("inviteCode").innerText;
       navigator.clipboard.writeText(code);
       alert("✅ Invite Code copied: " + code);
+    }
+
+    function copyServerIP() {
+      const ip = "play.hgcserver.net"; // Update this if your IP changes
+      navigator.clipboard.writeText(ip);
+      alert("✅ Server IP copied: " + ip);
     }
   </script>
 
